@@ -1,0 +1,32 @@
+html {
+  background: url('https://images6.alphacoders.com/876/thumb-1920-876591.jpg') no-repeat center center fixed;
+ 
+  background-size: cover;
+}
+
+html {
+  display: flexbox;
+  
+}
+
+h1 {
+  text-align: center;
+  color: aqua;
+  font-weight: bold;
+  font-family: 'Creepster';
+  
+}
+
+.search-section {
+  
+  color: aqua
+}
+
+h2 {
+  color: aqua;
+  text-decoration: underline;
+  font-family: 'Creepster';
+}
+
+
+ 
