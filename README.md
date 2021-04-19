@@ -16,6 +16,7 @@
 
 **https://rickandmortyapi.com/api/character**
 
+```json
 {
     "info": {
         "count": 671,
@@ -42,7 +43,7 @@
             "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
             "episode": [
                 "https://rickandmortyapi.com/api/episode/1",
-
+```
 
 
 ## Wireframes
