@@ -88,22 +88,22 @@
 ## Timeframes
 
 
-
 | Component | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Basic HTML  | 5 hrs| hrs | hrs |
-| Basic CSS   | 3hrs|  |  |
-| Use Axios to retrieve API data | 3hrs| hrs | hrs |
-| Pseudo Code  | 2hrs| hrs | hrs |
-| Add 3 select-form eventListeners | 3hrs| hrs | hrs |
-| Create HTML DOM elements through JS | 3hrs| hrs | hrs |
-|  Add removeElement function to clear grid
-when doing another search| 3hrs| hrs | hrs |
-| CSS Flex Box | 6 hrs| hrs | hrs |
-|  Media Query | H | 4 hrs| hrs | hrs |
-|  | H | 3hrs| hrs | hrs |
-|  | H | 3hrs| hrs | hrs |
-| Total | H | hrs| hrs | hrs |
+| Basic HTML  | 1 hrs| hrs | hrs | hrs |
+| HTML Drop Down Forms | 3 hrs| hrs | hrs | hrs |
+| HTML for Character Cards | 3 hrs| hrs | hrs | hrs |
+| Basic CSS  | 3 hrs| hrs | hrs | hrs |
+| Use Axios to retrieve API data | 3hrs| hrs | hrs | hrs |
+| Pseudo Code  | 2hrs| hrs | hrs | hrs |
+| Add 3 select-form eventListeners | 3hrs| hrs | hrs | hrs |
+| Create HTML DOM elements through JS | 3hrs| hrs | hrs | hrs |
+| Add removeElement function to clear grid when doing another search| 3hrs| hrs | hrs | hrs |
+| CSS Flex Box Drop Down Menu| 3 hrs| hrs | hrs | hrs |
+| CSS Flex Box Character cards | 3 hrs| hrs | hrs | hrs |
+| Media Query Desk-top to mobile | H | 4 hrs| hrs |  hrs |
+| Total | H | 32 hrs| hrs | hrs |
+
 
 ## Code Snippet
 
