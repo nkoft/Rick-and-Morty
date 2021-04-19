@@ -88,12 +88,12 @@
 ## Timeframes
 
 
-| Component | Estimated Time | Time Invested | Actual Time |
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Basic HTML | H | 1 hrs | hrs | hrs |
 | HTML Drop Down Forms | H | 3 hrs | hrs | hrs |
 | HTML for Character Cards | H | 3 hrs | hrs | hrs |
-| Basic CSS | 3 hrs| hrs | hrs | hrs |
+| Basic CSS | H | 3 hrs | hrs | hrs |
 | Use Axios to retrieve API data | H | 3 hrs | hrs | hrs |
 | Pseudo Code | H | 2 hrs | hrs | hrs |
 | Add 3 select-form eventListeners | H | 3 hrs | hrs | hrs |
