@@ -102,7 +102,7 @@
 | CSS Flex Box Drop Down Menu | H | 3 hrs | hrs | hrs |
 | CSS Flex Box Character cards |H | 3 hrs | hrs | hrs |
 | Media Query Desktop to mobile | H | 4 hrs| hrs | hrs |
-| Total | H | 32 hrs| hrs | hrs |
+| Total | H | 34 hrs| hrs | hrs |
 
 
 ## Code Snippet
