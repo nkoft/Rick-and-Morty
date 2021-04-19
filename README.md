@@ -98,8 +98,8 @@
 | Pseudo Code  | 2hrs| hrs | hrs | hrs |
 | Add 3 select-form eventListeners | 3hrs| hrs | hrs | hrs |
 | Create HTML DOM elements through JS | 3hrs| hrs | hrs | hrs |
-| Add removeElement function to clear grid when doing another search| 3hrs| hrs | hrs | hrs |
-| CSS Flex Box Drop Down Menu| 3 hrs| hrs | hrs | hrs |
+| Add removeElement function to clear grid when doing another search | 3hrs| hrs | hrs | hrs |
+| CSS Flex Box Drop Down Menu | 3 hrs| hrs | hrs | hrs |
 | CSS Flex Box Character cards | 3 hrs| hrs | hrs | hrs |
 | Media Query Desk-top to mobile | H | 4 hrs| hrs |  hrs |
 | Total | H | 32 hrs| hrs | hrs |
