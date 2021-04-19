@@ -48,7 +48,8 @@ Specify the API you are using and include a link. Show us a snippet of JSON retu
 ## Wireframes
 
 
-![Rick and Morty](https://user-images.githubusercontent.com/82776561/115158376-d58a2280-a05b-11eb-89e9-0a05600c01d5.png)
+![image](https://user-images.githubusercontent.com/82776561/115169038-edc56600-a08a-11eb-96e4-b7816e242b4c.png)
+
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
