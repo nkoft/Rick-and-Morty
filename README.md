@@ -83,8 +83,7 @@
 
 ## Priority Matrix
 
-
-![image](https://user-images.githubusercontent.com/82776561/115167328-35e18a00-a085-11eb-83a7-d187938988be.png)
+[image](https://user-images.githubusercontent.com/82776561/115167328-35e18a00-a085-11eb-83a7-d187938988be.png)
 
 ## Timeframes
 
