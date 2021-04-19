@@ -57,25 +57,19 @@
 ### MVP/PostMVP
 
   
-
 #### MVP 
-
-- Find and use external api 
-- Render data on page 
-- Allow user to choose and display character(s) by name status or species
-- incorporate css and flexbox to display a grid for characters
+ 
+- Render character image, name, species and status
+- Allow user to select and display character(s) by name status or species by drop down menu 
+- Position drop downs on the left in a column. And style character cards in a grid-like layout.
 
 #### PostMVP  
 
-Add additonal API calls to incease character list
-
-Add music to the main page
+- Display alive status in green and dead in red
+- Add additonal API calls to incease character list
+- Add music to the main page
 
 ## Project Schedule
-
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
 |  Day | Deliverable | Status
 |---|---| ---|
