@@ -10,6 +10,12 @@ async function getCharacterData() {
     console.log(response.data.results)
     return response
 
+
+    // for (let i = 0; i < response.data.results.length; i++) {
+    //   console.log(characterList[i])
+    // }
+
+
   }
   catch (error) {
     console.error(error)
@@ -22,12 +28,34 @@ getCharacterData()
 
 // Create the form option tags
 // One for all characters, one for status(dead or alive), one for species
+function setCharacterOptions(list) {
+  // console.log(list)
+  const selectCharacterTag = document.querySelector('#select-character')
+  list.forEach((name) => {
+    // console.log(name)
+    const characterOptionTag = document.createElement('option')
+    characterOptionTag.textContent = name
+    characterOptionTag.value = name
+    selectCharacterTag.append(characterOptionTag)
+  });
+  return list
+}
 
+// let characterList = Object.keys(response.data.results)
+// console.log(characterList)
+// setCharacterOptions(characterList)
+// return characterList
 
 
 
 // Get option tag values:
 // Create tag value for characters
+function getValue(e) {
+  e.preventDefault()
+  const characterOptionValue = document.querySelector('#select-character').value
+  // console.log(characterOptionValue)
+  getBreedImage(characterOptionValue)
+}
 
 
 // Create tag value for species
