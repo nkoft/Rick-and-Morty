@@ -10,7 +10,7 @@ async function getCharacterData() {
     // console.log(response.data.results)
 
     getCharacterByName(response.data.results)
-    // getCharacterBySpecies(response.data.results)
+    getCharactersBySpecies(response.data.results)
 
     return response
 
@@ -35,15 +35,15 @@ function getCharacterByName(data) {
   })
 }
 
-// function getCharacterBySpecies(data) {
-//   const speciesSelect = document.querySelector('#select-species')
-//   data.forEach((species) => {
-//     const speciesTag = document.createElement('option')
-//     speciesTag.textContent = species.species
-//     speciesTag.value = species.id
-//     speciesSelect.append(speciesTag)
-//   })
-// }
+function getCharactersBySpecies(data) {
+  const speciesSelect = document.querySelector('#select-species')
+  data.forEach((species) => {
+    console.log(species.species)
+    const humanTag = document.querySelector('#human')
+    humanTag.value = species.species
+    speciesSelect.append(humanTag)
+  })
+}
 
 // Create the form option tags
 // One for all characters, one for status(dead or alive), one for species
