@@ -1,6 +1,4 @@
 
-
-
 async function getCharacterData() {
 
   const url = 'https://rickandmortyapi.com/api/character'
@@ -8,12 +6,8 @@ async function getCharacterData() {
   try {
     const response = await axios.get(url)
     // console.log(response.data.results)
-
     getCharacterByName(response.data.results)
-    getCharactersBySpecies(response.data.results)
-
     return response
-
   }
   catch (error) {
     console.error(error)
@@ -35,15 +29,6 @@ function getCharacterByName(data) {
   })
 }
 
-function getCharactersBySpecies(data) {
-  const speciesSelect = document.querySelector('#select-species')
-  data.forEach((species) => {
-    console.log(species.species)
-    const humanTag = document.querySelector('#human')
-    humanTag.value = species.species
-    speciesSelect.append(humanTag)
-  })
-}
 
 // Create the form option tags
 // One for all characters, one for status(dead or alive), one for species
@@ -55,7 +40,7 @@ async function getCharacterValue(id) {
     const response = await axios.get(url)
     console.log(response.data)
     removeChoice()
-    getCharacterSection(response.data)
+    getCharacterByNameSection(response.data)
 
     // invoke get character div function here ***
   }
@@ -63,6 +48,50 @@ async function getCharacterValue(id) {
     console.error(error)
   }
 }
+
+async function getCharactersBySpecies(species) {
+  try {
+    const url = `https://rickandmortyapi.com/api/character/?species=${species}`
+    const response = await axios.get(url)
+    // console.log(response.data.results)
+    removeChoice()
+    getCharacterSpeciesSection(response.data.results)
+  }
+  catch (error) {
+    console.error(error)
+  }
+}
+
+async function getCharactersByStatus(status) {
+  try {
+    const url = `https://rickandmortyapi.com/api/character/?status=${status}`
+    const response = await axios.get(url)
+    // console.log(response.data.results)
+    removeChoice()
+    getCharacterStatusSection(response.data.results)
+  }
+  catch (error) {
+    console.error(error)
+  }
+}
+const statusForm = document.querySelector('#status-form')
+statusForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  // console.log(speciesForm)
+  const statusOption = document.querySelector('#select-status').value
+  console.log(statusOption)
+  getCharactersByStatus(statusOption)
+})
+
+
+const speciesForm = document.querySelector('#species-form')
+speciesForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  // console.log(speciesForm)
+  const speciesOption = document.querySelector('#select-species').value
+  console.log(speciesOption)
+  getCharactersBySpecies(speciesOption)
+})
 
 
 const characterForm = document.querySelector('#person-form')
@@ -75,31 +104,45 @@ characterForm.addEventListener('submit', (e) => {
 
 })
 
+const getCharacterSpeciesSection = (data) => {
+  data.forEach((character) => {
+    getCharacterByNameSection(character)
+  })
+}
+
+const getCharacterStatusSection = (data) => {
+  data.forEach((character) => {
+    getCharacterByNameSection(character)
+  })
+}
 
 
+const getCharacterByNameSection = (data) => {
 
-const getCharacterSection = (data) => {
+  const section = document.createElement('section')
+  section.className = 'character-profile'
 
   const characterName = document.createElement('h3')
   characterName.innerText = data.name
-  document.querySelector('.character-profile').append(characterName)
+  section.append(characterName)
 
   const characterImg = document.createElement('img')
   characterImg.src = data.image
-  document.querySelector('.character-profile').append(characterImg)
+  section.append(characterImg)
 
   const characterSpecies = document.createElement('h4')
   characterSpecies.innerText = `Species: ${data.species}`
-  document.querySelector('.character-profile').append(characterSpecies)
+  section.append(characterSpecies)
 
   const characterStatus = document.createElement('h4')
   characterStatus.innerText = `Status: ${data.status}`
-  document.querySelector('.character-profile').append(characterStatus)
+  section.append(characterStatus)
 
+  document.querySelector('.characters').append(section)
 }
 
 function removeChoice() {
-  let oldChoice = document.querySelector('.character-profile')
+  let oldChoice = document.querySelector('.characters')
   while (oldChoice.lastChild) {
     oldChoice.removeChild(oldChoice.lastChild)
   }
