@@ -23,10 +23,14 @@ h1 {
 }
 
 h2 {
-  color: aqua;
   text-decoration: underline;
+  color: aqua;
   font-family: 'Creepster';
 }
 
+h3, h4 {
+  color: aqua;
+  font-family: 'Creepster';
+}
 
  

@@ -8,7 +8,10 @@ async function getCharacterData() {
   try {
     const response = await axios.get(url)
     // console.log(response.data.results)
-    getCharacters(response.data.results)
+
+    getCharacterByName(response.data.results)
+    // getCharacterBySpecies(response.data.results)
+
     return response
 
   }
@@ -19,7 +22,7 @@ async function getCharacterData() {
 
 getCharacterData()
 
-function getCharacters(data) {
+function getCharacterByName(data) {
   // console.log('characters', data)
   const characterSelect = document.querySelector('#select-character')
   // console.log(characterForm)
@@ -32,6 +35,16 @@ function getCharacters(data) {
   })
 }
 
+// function getCharacterBySpecies(data) {
+//   const speciesSelect = document.querySelector('#select-species')
+//   data.forEach((species) => {
+//     const speciesTag = document.createElement('option')
+//     speciesTag.textContent = species.species
+//     speciesTag.value = species.id
+//     speciesSelect.append(speciesTag)
+//   })
+// }
+
 // Create the form option tags
 // One for all characters, one for status(dead or alive), one for species
 // 
@@ -41,7 +54,8 @@ async function getCharacterValue(id) {
     const url = `https://rickandmortyapi.com/api/character/${id}`
     const response = await axios.get(url)
     console.log(response.data)
-
+    removeChoice()
+    getCharacterSection(response.data)
 
     // invoke get character div function here ***
   }
@@ -54,6 +68,7 @@ async function getCharacterValue(id) {
 const characterForm = document.querySelector('#person-form')
 characterForm.addEventListener('submit', (e) => {
   e.preventDefault()
+
   const selectCharacter = document.querySelector('#select-character').value
   // console.log(selectCharacter)
   getCharacterValue(selectCharacter)
@@ -61,16 +76,34 @@ characterForm.addEventListener('submit', (e) => {
 })
 
 
-// Surely this is incorrect:
 
-// const getCharacterSection = (data) => {
-//   data.forEach((character) => {
-//     const characterName = document.createElement('h2')
-//     characterName.innerText = character.name
-//     document.querySelector('.characters').append(characterName)
-//   })
-// }
 
+const getCharacterSection = (data) => {
+
+  const characterName = document.createElement('h3')
+  characterName.innerText = data.name
+  document.querySelector('.character-profile').append(characterName)
+
+  const characterImg = document.createElement('img')
+  characterImg.src = data.image
+  document.querySelector('.character-profile').append(characterImg)
+
+  const characterSpecies = document.createElement('h4')
+  characterSpecies.innerText = `Species: ${data.species}`
+  document.querySelector('.character-profile').append(characterSpecies)
+
+  const characterStatus = document.createElement('h4')
+  characterStatus.innerText = `Status: ${data.status}`
+  document.querySelector('.character-profile').append(characterStatus)
+
+}
+
+function removeChoice() {
+  let oldChoice = document.querySelector('.character-profile')
+  while (oldChoice.lastChild) {
+    oldChoice.removeChild(oldChoice.lastChild)
+  }
+}
 
 
 // Get option tag values:
