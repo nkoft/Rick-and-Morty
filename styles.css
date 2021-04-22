@@ -1,36 +1,58 @@
 html {
-  background: url('https://images6.alphacoders.com/876/thumb-1920-876591.jpg') no-repeat center center fixed;
+  background: url('https://www.99images.com/photos/wallpapers/tv-shows/rick-and-morty%20android-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-dyrwo.png?v=1616320933') no-repeat center center fixed;
  
   background-size: cover;
 }
 
-html {
-  display: flexbox;
+
   
-}
+
 
 h1 {
   text-align: center;
-  color: aqua;
+  color: #69C8ECFF;
   font-weight: bold;
   font-family: 'Creepster';
-  
-}
-
-.search-section {
-  
-  color: aqua
+  font-size: 50px;
 }
 
 h2 {
   text-decoration: underline;
-  color: aqua;
+  color: #69C8ECFF;
   font-family: 'Creepster';
 }
 
 h3, h4 {
-  color: aqua;
+  color: #69C8ECFF;
   font-family: 'Creepster';
 }
 
+
+ .select, button {
+   margin: 10px;
+   color: #69C8ECFF;
+   background-color: black;
+ }
+
+ main {
+   display: flex;
+   align-items: flex-start;
+ }
+
+ .search-section {
+  text-align: center;
  
+ }
+
+ .characters section {
+   display: inline-flex;
+  flex-wrap: wrap;
+   margin: 10px;
+ }
+ 
+.character-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}

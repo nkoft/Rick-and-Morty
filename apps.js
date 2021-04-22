@@ -122,13 +122,14 @@ const getCharacterByNameSection = (data) => {
   const section = document.createElement('section')
   section.className = 'character-profile'
 
+  const characterImg = document.createElement('img')
+  characterImg.src = data.image
+  section.append(characterImg)
+
   const characterName = document.createElement('h3')
   characterName.innerText = data.name
   section.append(characterName)
 
-  const characterImg = document.createElement('img')
-  characterImg.src = data.image
-  section.append(characterImg)
 
   const characterSpecies = document.createElement('h4')
   characterSpecies.innerText = `Species: ${data.species}`
