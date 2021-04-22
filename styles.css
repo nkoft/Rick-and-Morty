@@ -1,12 +1,8 @@
-html {
+body {
   background: url('https://www.99images.com/photos/wallpapers/tv-shows/rick-and-morty%20android-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-dyrwo.png?v=1616320933') no-repeat center center fixed;
- 
+
   background-size: cover;
 }
-
-
-  
-
 
 h1 {
   text-align: center;
@@ -23,15 +19,22 @@ h2 {
 }
 
 h3, h4 {
-  color: #69C8ECFF;
-  font-family: 'Creepster';
+   color: #69C8ECFF;
+   font-family: 'Creepster';
+   margin: 5px;
 }
 
+form {
+   margin-bottom: 15px;
+}
 
  .select, button {
-   margin: 10px;
+   display: block;
+   margin: 5px;
+   padding: 5px 10px;
    color: #69C8ECFF;
    background-color: black;
+   width: 150px;
  }
 
  main {
@@ -40,19 +43,39 @@ h3, h4 {
  }
 
  .search-section {
-  text-align: center;
+   text-align: center;
  
  }
 
- .characters section {
-   display: inline-flex;
-  flex-wrap: wrap;
-   margin: 10px;
+ .characters  {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 10px;
  }
  
 .character-profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
- 
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background: rgba(0, 0, 0, 0.5);
+   padding: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+  }
+
+  .select, button {
+    margin: 5px auto;
+  }
+
+  .characters  {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
 }
