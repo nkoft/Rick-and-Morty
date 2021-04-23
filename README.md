@@ -73,12 +73,12 @@
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|April 16-18| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|April 19| Project Approval | Incomplete
-|April 20| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|April 20| Pseudocode / actual code | Incomplete
-|April 21| Initial Clickable Model  | Incomplete
-|April 22| MVP | Incomplete
+|April 16-18| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|April 19| Project Approval | Complete
+|April 20| Core Application Structure (HTML, CSS, etc.) | Complete
+|April 20| Pseudocode / actual code | Complete
+|April 21| Initial Clickable Model  | Complete
+|April 22| MVP | Complete
 |April 23| Presentations | Incomplete
 
 ## Priority Matrix
@@ -90,26 +90,45 @@
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Basic HTML | H | 1 hrs | hrs | hrs |
-| HTML Drop Down Forms | H | 3 hrs | hrs | hrs |
-| HTML for Character Cards | H | 3 hrs | hrs | hrs |
-| Basic CSS | H | 3 hrs | hrs | hrs |
-| Use Axios to retrieve API data | H | 3 hrs | hrs | hrs |
-| Pseudo Code | H | 2 hrs | hrs | hrs |
-| Add 3 select-form eventListeners | H | 3 hrs | hrs | hrs |
-| Create HTML DOM elements through JS | H | 3 hrs | hrs | hrs |
-| Add removeElement function to clear grid when doing another search | H | 3 hrs | hrs | hrs |
-| CSS Flex Box Drop Down Menu | H | 3 hrs | hrs | hrs |
-| CSS Flex Box Character cards |H | 3 hrs | hrs | hrs |
-| Media Query Desktop to mobile | H | 4 hrs| hrs | hrs |
-| Total | H | 34 hrs| hrs | hrs |
+| Basic HTML | H | 1 hrs | hrs | 1 hrs |
+| HTML Drop Down Forms | H | 3 hrs | hrs | 2 hrs |
+| HTML for Character Cards | H | 3 hrs | hrs | 0 hrs |
+| Basic CSS | H | 3 hrs | hrs | 2 hrs |
+| Use Axios to retrieve API data | H | 3 hrs | hrs | 5 hrs |
+| Pseudo Code | H | 2 hrs | hrs | 1 hrs |
+| Add 3 select-form eventListeners | H | 3 hrs | hrs | 4 hrs |
+| Create HTML DOM elements through JS | H | 3 hrs | hrs | 4 hrs |
+| Add removeElement function to clear grid when doing another search | H | 3 hrs | hrs | 1 hrs |
+| CSS Flex Box Drop Down Menu | H | 3 hrs | hrs | 2 hrs |
+| CSS Flex Box Character cards |H | 3 hrs | hrs | 4 hrs |
+| Media Query Desktop to mobile | H | 4 hrs| hrs | 2 hrs |
+| Total | H | 34 hrs| hrs | 28 hrs |
 
 
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
+``` 
+const getCharacterSpeciesSection = (data) => {
+  data.forEach((character) => {
+    getCharacterByNameSection(character)
+  })
+}
 
+const getCharacterStatusSection = (data) => {
+  data.forEach((character) => {
+    getCharacterByNameSection(character)
+  })
+}
+```
+
+**I enjoyed creating these functions because they allowed me to save a lot of time. I essentially took
+my getCharacterByNameSection() and invoked it as a forEach() inside these two parent functions to create a character profile grid instead of having to write everything out again.**
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+ Use this section to document what changes were made and the reasoning behind those changes. 
+ 
+**Did not need to make Character Cards in my initial html write-up. Eventually in my JS code I created the necessary dynamic HTML DOM elements.** 
+ 
+ 
