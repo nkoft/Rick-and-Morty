@@ -10,7 +10,7 @@
 
 **Users will be able to click on one of three drop down menus and search characters by name, species or status.**
 
-
+[Deployed Rick and Morty site](https://nkoft.github.io/Rick-and-Morty/)
 
 ## API and Data Sample
 
