@@ -129,6 +129,6 @@ my getCharacterByNameSection() and invoked it as a forEach() inside these two pa
 ## Change Log
  Use this section to document what changes were made and the reasoning behind those changes. 
  
-**Did not need to make Character Cards in my initial html write-up. Eventually in my JS code I created the necessary dynamic HTML DOM elements.** 
+**Did not need to make Character Cards in my initial html write-up. Eventually in my JS code I created the necessary dynamic HTML DOM elements. I also re-formatted my html a couple times, making changes to better suit my coding needs. Two examples of this were creating the button elements when I didn't have any initially, as well as adding in the dropdown options for select-species and select-status. This was easier for me to work with instead to trying to create and filter these options through JavaScript.** 
  
  
