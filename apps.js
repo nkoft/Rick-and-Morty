@@ -1,11 +1,13 @@
 
+
+
 async function getCharacterData() {
 
   const url = 'https://rickandmortyapi.com/api/character'
 
   try {
     const response = await axios.get(url)
-    // console.log(response.data.results)
+
     getCharacterByName(response.data.results)
     return response
   }
@@ -16,12 +18,14 @@ async function getCharacterData() {
 
 getCharacterData()
 
+
+
 function getCharacterByName(data) {
-  // console.log('characters', data)
+
   const characterSelect = document.querySelector('#select-character')
-  // console.log(characterForm)
+
   data.forEach((person) => {
-    // console.log(person.id)
+
     const personTag = document.createElement('option')
     personTag.textContent = person.name
     personTag.value = person.id
@@ -38,11 +42,11 @@ async function getCharacterValue(id) {
   try {
     const url = `https://rickandmortyapi.com/api/character/${id}`
     const response = await axios.get(url)
-    console.log(response.data)
+
     removeChoice()
     getCharacterByNameSection(response.data)
 
-    // invoke get character div function here ***
+
   }
   catch (error) {
     console.error(error)
@@ -53,7 +57,7 @@ async function getCharactersBySpecies(species) {
   try {
     const url = `https://rickandmortyapi.com/api/character/?species=${species}`
     const response = await axios.get(url)
-    // console.log(response.data.results)
+
     removeChoice()
     getCharacterSpeciesSection(response.data.results)
   }
@@ -66,7 +70,7 @@ async function getCharactersByStatus(status) {
   try {
     const url = `https://rickandmortyapi.com/api/character/?status=${status}`
     const response = await axios.get(url)
-    // console.log(response.data.results)
+
     removeChoice()
     getCharacterStatusSection(response.data.results)
   }
@@ -77,9 +81,9 @@ async function getCharactersByStatus(status) {
 const statusForm = document.querySelector('#status-form')
 statusForm.addEventListener('submit', (e) => {
   e.preventDefault()
-  // console.log(speciesForm)
+
   const statusOption = document.querySelector('#select-status').value
-  console.log(statusOption)
+
   getCharactersByStatus(statusOption)
 })
 
@@ -87,9 +91,9 @@ statusForm.addEventListener('submit', (e) => {
 const speciesForm = document.querySelector('#species-form')
 speciesForm.addEventListener('submit', (e) => {
   e.preventDefault()
-  // console.log(speciesForm)
+
   const speciesOption = document.querySelector('#select-species').value
-  console.log(speciesOption)
+
   getCharactersBySpecies(speciesOption)
 })
 
@@ -99,7 +103,7 @@ characterForm.addEventListener('submit', (e) => {
   e.preventDefault()
 
   const selectCharacter = document.querySelector('#select-character').value
-  // console.log(selectCharacter)
+
   getCharacterValue(selectCharacter)
 
 })
