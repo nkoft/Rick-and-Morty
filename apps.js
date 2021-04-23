@@ -18,7 +18,7 @@ async function getCharacterData() {
 
 getCharacterData()
 
-
+// These functions kick off my page and append data to my select character form
 
 function getCharacterByName(data) {
 
@@ -34,9 +34,8 @@ function getCharacterByName(data) {
 }
 
 
-// Create the form option tags
-// One for all characters, one for status(dead or alive), one for species
-// 
+// Invoke Function to get Character Profile By Name(ID):
+
 
 async function getCharacterValue(id) {
   try {
@@ -52,6 +51,8 @@ async function getCharacterValue(id) {
     console.error(error)
   }
 }
+
+// Go to getCharacterByNameSection first. These functions follow.
 
 async function getCharactersBySpecies(species) {
   try {
@@ -78,6 +79,7 @@ async function getCharactersByStatus(status) {
     console.error(error)
   }
 }
+
 const statusForm = document.querySelector('#status-form')
 statusForm.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -97,6 +99,7 @@ speciesForm.addEventListener('submit', (e) => {
   getCharactersBySpecies(speciesOption)
 })
 
+// Event Listener to select individual characters:
 
 const characterForm = document.querySelector('#person-form')
 characterForm.addEventListener('submit', (e) => {
@@ -107,6 +110,9 @@ characterForm.addEventListener('submit', (e) => {
   getCharacterValue(selectCharacter)
 
 })
+
+// I created a character grid for the following invocations incorporating
+// the getCharacterByNameSection function I already wrote:
 
 const getCharacterSpeciesSection = (data) => {
   data.forEach((character) => {
@@ -120,6 +126,7 @@ const getCharacterStatusSection = (data) => {
   })
 }
 
+// This is where we append the character profile elements to HTML DOM
 
 const getCharacterByNameSection = (data) => {
 
@@ -146,6 +153,8 @@ const getCharacterByNameSection = (data) => {
   document.querySelector('.characters').append(section)
 }
 
+// Clear character profile elements before conducting another search. 
+
 function removeChoice() {
   let oldChoice = document.querySelector('.characters')
   while (oldChoice.lastChild) {
@@ -154,27 +163,5 @@ function removeChoice() {
 }
 
 
-// Get option tag values:
-// Create tag value for characters
-
-
-
-// Create tag value for species
-
-
-// Create tag value for status dead or alive
-
-
-
-// Create EventHandler for Forms
-// Event Listener on click for all 3 options
-
-
-// Fetch Data for Character Data: Images, Names, Species, Status
-// Create dynamic html: img tag h3(name) and two p tags(species + status)
-
-
-
-// Create removeImage tags for during each search
 
 
